@@ -1,3 +1,7 @@
 import express from 'express'
 
-console.log('Running server')
+const server = express();
+
+server.listen(3000, () => {
+    console.log('Listening on port 3000');
+});
