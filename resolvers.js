@@ -26,7 +26,7 @@ const resolvers = {
         authors: () => {
             return Author.find();
         },
-        author: (root, args) => authors.find(author => author.id === args.id)
+        author: (root, {id}) => Author.findById(id)
     },
     Mutation: {
         addAuthor: (root, {name, age, books}) => {
