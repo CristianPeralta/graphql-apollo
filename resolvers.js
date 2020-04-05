@@ -27,6 +27,16 @@ const resolvers = {
             return Author.find();
         },
         author: (root, args) => authors.find(author => author.id === args.id)
+    },
+    Mutation: {
+        addAuthor: (root, {name, age, books}) => {
+            const author = new Author({
+                name,
+                age,
+                books,
+            });
+            return author.save();
+        }
     }
 };
 
