@@ -22,7 +22,8 @@
     "apollo-server-express": "^2.11.0",
     "express": "^4.17.1",
     "graphql": "^15.0.0",
-    "graphql-tools": "^4.0.7"
+    "graphql-tools": "^4.0.7",
+    "mongoose": "^5.9.7"
   },
   "nodemonConfig": {
     "delay": 2000,
