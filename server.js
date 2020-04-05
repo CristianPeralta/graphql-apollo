@@ -13,6 +13,8 @@ mongoose.connect('mongodb://localhost:27017/graphqltestdb',{
 .then(() => console.log('DB Connected!'))
 .catch((error) => console.log(`DB Connection Error: ${error.message}`));
 
+mongoose.set('useFindAndModify', false);
+
 const server = new ApolloServer({schema});
 
 const app = express();

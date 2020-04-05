@@ -37,6 +37,9 @@ const resolvers = {
             });
             return author.save();
         },
+        updateAuthorName: (root, {id, name}) => {
+            return Author.findOneAndUpdate({_id: id}, {name}, {new: true});
+        },
         deleteAuthor: (root, {id}) => {
             return Author.deleteOne({_id: id});
         }
