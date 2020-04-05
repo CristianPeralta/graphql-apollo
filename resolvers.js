@@ -1,3 +1,5 @@
+import Author from './models/Author';
+
 const authors = [
     {
         id: 1,
@@ -22,7 +24,7 @@ const authors = [
 const resolvers = {
     Query: {
         authors: () => {
-            return authors;
+            return Author.find();
         },
         author: (root, args) => authors.find(author => author.id === args.id)
     }

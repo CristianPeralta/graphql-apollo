@@ -1,5 +1,5 @@
 
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
 const authorSchema = new mongoose.Schema({
   name: String,
@@ -11,4 +11,4 @@ const authorSchema = new mongoose.Schema({
 
 const author = mongoose.model('author', authorSchema);
 
-module.exports = author;
+export default author;
