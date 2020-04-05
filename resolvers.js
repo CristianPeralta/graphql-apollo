@@ -36,6 +36,9 @@ const resolvers = {
                 books,
             });
             return author.save();
+        },
+        deleteAuthor: (root, {id}) => {
+            return Author.deleteOne({_id: id});
         }
     }
 };

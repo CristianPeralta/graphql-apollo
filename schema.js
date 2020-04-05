@@ -8,12 +8,17 @@ const typeDefs = `
         name: String
         books: [String]
     }
+    type DeleteResponse {
+        deletedCount: Int
+        ok: Int
+    }
     type Query {
         authors: [Author]
         author(id: String): Author
     }
     type Mutation {
         addAuthor(name: String, age: Int, books: [String]): Author
+        deleteAuthor(id: String): DeleteResponse
     }
 `;
 
